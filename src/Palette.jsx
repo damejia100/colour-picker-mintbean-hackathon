@@ -23,12 +23,8 @@ export default function Palette({ hex, variation, setting, settingValue }) {
     case "triad":
       colors = tinycolor(hex).triad();
       break;
-    case "tetrad":
-      colors = tinycolor(hex).tetrad();
-      break;
-    case "complement":
+    default:
       colors = tinycolor(hex).complement().toHexString();
-      break;
   }
 
   // Using a dictionary object to set setting
